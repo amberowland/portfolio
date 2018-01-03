@@ -1,0 +1,54 @@
+@import "../main";
+
+//Todo: fix the shadows
+
+body.grid {
+    div.column {
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 18%;
+            top: 0;
+            left: -5%;
+            background: rgba(0, 0, 0, 0.2);
+            transform: skewX(-1deg);
+        }
+        &.purple {
+            background-color: $Purple;
+            z-index: 0;
+            &:before {
+                display: none;
+            }
+        }
+        &.red {
+            background-color: $Red;
+            z-index: 100;
+            &:before {
+                z-index: 50;
+            }
+        }
+        &.pink {
+            background-color: $Pink;
+            z-index: 150;
+            &:before {
+                z-index: 125;
+            }
+        }
+        &.black {
+            background-color: $Black;
+            z-index: 200;
+            &:before {
+                z-index: 175;
+            }
+        }
+        &.white {
+            background-color: $White;
+            &:before {
+                display: none;
+            }
+        }
+
+    }
+}
